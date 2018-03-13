@@ -1,21 +1,39 @@
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 
-public class Place {
-    private String name;
+public class Place extends LocationElement {
     private String city;
     private Double avgPricePerDay;
+    Date startDate;
+    Date endDate;
     private Collection<String> activities = new ArrayList<>();
 
-    public Place(String name, String city, Double avgPricePerDay, Collection<String> activities) {
-        this.name = name;
-        this.city = city;
+    public Place(String name, Double avgPricePerDay, Date startDate, Date endDate, Collection<String> activities) {
+        super(name);
         this.avgPricePerDay = avgPricePerDay;
+        this.startDate = startDate;
+        this.endDate = endDate;
         this.activities = activities;
     }
 
+    @Override
+    public void setSuperiorElement(LocationElement superiorElement) {
+        super.setSuperiorElement(superiorElement);
+        this.city = superiorElement.getName();
+    }
+
+    /**
+     * Last element in the hierarchical structure.
+     * @param locationElement
+     */
+    @Override
+    public void addLocationElement(LocationElement locationElement) {
+        return;
+    }
+
     public String getName() {
-        return name;
+        return super.getName();
     }
 
     public String getCity() {
@@ -30,10 +48,6 @@ public class Place {
         return activities;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public void setCity(String city) {
         this.city = city;
     }
@@ -44,5 +58,13 @@ public class Place {
 
     public void setActivities(Collection<String> activities) {
         this.activities = activities;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
     }
 }

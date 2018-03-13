@@ -1,3 +1,5 @@
+import java.text.ParseException;
+
 public class Main {
     private static final String fileName = "in.txt";
 
@@ -6,6 +8,12 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        ReadData.ReadDataFromFile(fileName);
+        try {
+            ReadData.ReadDataFromFile(fileName);
+            System.out.println(((Place) World.getInstance().getElement("RO").getElement("CT").getElement("Cta").getElement("OldTown")).getAvgPricePerDay());
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 }
