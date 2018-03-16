@@ -1,3 +1,5 @@
+package hierarchical_structure;
+
 import java.util.HashMap;
 
 public class World {

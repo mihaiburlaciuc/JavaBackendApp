@@ -1,3 +1,7 @@
+package hierarchical_structure;
+
+import hierarchical_structure.LocationElement;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;

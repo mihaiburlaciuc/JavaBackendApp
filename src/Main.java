@@ -1,3 +1,7 @@
+import hierarchical_structure.Place;
+import hierarchical_structure.World;
+import main.ReadData;
+
 import java.text.ParseException;
 
 public class Main {

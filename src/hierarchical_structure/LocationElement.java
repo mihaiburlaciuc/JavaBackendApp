@@ -1,3 +1,5 @@
+package hierarchical_structure;
+
 import java.util.HashMap;
 
 public abstract class LocationElement {
@@ -17,8 +19,14 @@ public abstract class LocationElement {
         return subElements.get(name);
     }
 
-    public abstract void addLocationElement(LocationElement locationElement);
+    public HashMap<String, LocationElement> getSubElements() {
+        return subElements;
+    }
+
     public String getName() {
         return name;
     };
+
+    public abstract void addLocationElement(LocationElement locationElement);
+
 }

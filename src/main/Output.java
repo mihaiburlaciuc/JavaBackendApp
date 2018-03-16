@@ -1,3 +1,5 @@
+package main;
+
 public class Output {
     public static void output(String command) {
         String[] commands = command.split(" ");
