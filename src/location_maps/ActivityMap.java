@@ -25,6 +25,8 @@ public class ActivityMap {
         } else {
             tempPlaces.add(place);
         }
+
+        activityMap.put(activity, tempPlaces);
     }
 
     public ArrayList<Place> getPlaces(String activity) {

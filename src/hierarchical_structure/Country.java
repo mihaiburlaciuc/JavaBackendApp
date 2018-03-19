@@ -10,7 +10,6 @@ public class Country extends LocationElement {
 
     @Override
     public void addLocationElement(LocationElement locationElement) {
-        System.out.println(this.getClass() + ": " + locationElement.getName());
         locationElement.setSuperiorElement(this);
         subElements.put(locationElement.getName(), locationElement);
     }

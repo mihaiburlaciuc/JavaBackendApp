@@ -26,6 +26,7 @@ public class Utility {
         ArrayList<Place> places = new ArrayList<>();
 
         for(Map.Entry<String, LocationElement> cityEntry : district.getSubElements().entrySet()) {
+//            System.out.println(cityEntry.getValue().getName() + " entry");
             places.addAll(getPlacesFromCityByDate((City) cityEntry.getValue(), start, end));
         }
 
@@ -40,8 +41,12 @@ public class Utility {
         for(Map.Entry<String, LocationElement> placeEntry : city.getSubElements().entrySet()) {
             Place tempPlace = (Place) placeEntry.getValue();
 
-            if (tempPlace.getStartDate().compareTo(start) >= 0
-                    && tempPlace.getEndDate().compareTo(end) <= 0) {
+//            System.out.println("true");
+//
+//            System.out.println(city.getName() + ": " + start.toString() + " - " + end.toString() + "\n");
+
+            if (tempPlace.getStartDate().compareTo(start) <= 0
+                    && tempPlace.getEndDate().compareTo(end) >= 0) {
                 places.add(tempPlace);
             }
         }

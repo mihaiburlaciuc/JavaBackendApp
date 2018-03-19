@@ -28,7 +28,8 @@ public class ReadData {
                 District tempDistrict = new District(currentEntrySplitter[1]);
                 City tempCity = new City(currentEntrySplitter[2]);
 
-                System.out.println(tempCity.getName());
+//                System.out.println(tempCity.getName() + "\nswag");
+//                System.out.println(tempCity.getName() + "\nswag");
 
                 String locationName = currentEntrySplitter[3];
                 Double avgPricePerDay = Double.parseDouble(currentEntrySplitter[4]);
@@ -36,7 +37,7 @@ public class ReadData {
                 Date endDate = new SimpleDateFormat("dd/MM/yyyy").parse(currentEntrySplitter[6]);
                 ArrayList<String> activities = new ArrayList<>();
                 for (int i = 7; i < currentEntrySplitter.length; i++) {
-                    activities.add(currentEntrySplitter[7]);
+                    activities.add(currentEntrySplitter[i]);
                 }
                 Place tempPlace = new Place(locationName, avgPricePerDay, startDate, endDate, activities);
                 tempCity.addLocationElement(tempPlace);

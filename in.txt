@@ -1,1 +1,16 @@
-RO CT Cta OldTown 40.5 09/09/2001 21/09/2001 coffee drinking music
+RO ROd0 ROd0c0 ROd0c0p0 100.0 6/1/2017 11/1/2017 activity0 activity1
+RO ROd0 ROd0c0 ROd0c0p1 95.0 1/6/2017 6/7/2017 activity0 activity1 activity2
+RO ROd0 ROd0c1 ROd0c1p0 90.0 15/1/2017 20/1/2017 activity0
+RO ROd0 ROd0c1 ROd0c1p1 85.0 10/6/2017 15/7/2017 activity0 activity1
+RO ROd1 ROd1c0 ROd1c0p0 80.0 5/1/2017 10/1/2017 activity0 activity1 activity2 
+RO ROd1 ROd1c0 ROd1c0p1 75.0 19/6/2017 24/7/2017 activity0
+RO ROd1 ROd1c1 ROd1c1p0 70.0 14/1/2017 19/1/2017 activity0 activity1
+RO ROd1 ROd1c1 ROd1c1p1 65.0 9/6/2017 14/7/2017 activity0 activity1 activity2
+BG BGd0 BGd0c0 BGd0c0p0 60.0 4/1/2017 9/1/2017 activity0
+BG BGd0 BGd0c0 BGd0c0p1 55.0 18/6/2017 23/7/2017 activity0 activity1
+BG BGd0 BGd0c1 BGd0c1p0 50.0 13/1/2017 18/1/2017 activity0 activity1 activity2
+BG BGd0 BGd0c1 BGd0c1p1 45.0 8/6/2017 13/7/2017 activity0
+BG BGd1 BGd1c0 BGd1c0p0 40.0 3/1/2017 8/1/2017 activity0 activity1
+BG BGd1 BGd1c0 BGd1c0p1 35.0 17/6/2017 22/7/2017 activity0 activity1 activity2
+BG BGd1 BGd1c1 BGd1c1p0 30.0 12/1/2017 17/1/2017 activity0
+BG BGd1 BGd1c1 BGd1c1p1 25.0 7/6/2017 12/7/2017 activity0 activity1

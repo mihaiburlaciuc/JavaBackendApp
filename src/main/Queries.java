@@ -6,16 +6,24 @@ import location_maps.CityMap;
 import location_maps.DistrictsMap;
 import location_maps.PlacesMap;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 
 public class Queries {
-    public String getInfoForName(String name) {
+    private final static int TOP_FIVE = 5;
+
+    public static String getInfoForName(String name) {
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Place tempPlace = PlacesMap.getInstance().getLocation(name);
-        String info = "Location name: " + tempPlace.getName() + "\n";
-        info += "hierarchical_structure.City: " + tempPlace.getCity() +"\n";
+        String info = "";
+        info += "Location name: " + tempPlace.getName() + "\n";
+        info += "City: " + tempPlace.getCity() +"\n";
         info += "Average price per day: " + tempPlace.getAvgPricePerDay() + "\n";
-        info += "Start period: " + tempPlace.getStartDate() + " until " + tempPlace.getEndDate() + "\n";
+        info += "Start period: " + dateFormat.format(tempPlace.getStartDate())
+                + " until " + dateFormat.format(tempPlace.getEndDate()) + "\n";
         ArrayList<String> tempActivities = (ArrayList<String>) tempPlace.getActivities();
         info += "Activities:";
         for (String activity:tempActivities) {
@@ -26,8 +34,11 @@ public class Queries {
         return info;
     }
 
-    public String getTopFiveLocations(LocationType type, String name, Date start, Date end) {
-        ArrayList<Place> places;
+    public static String getTopFiveLocations(LocationType type, String name, Date start, Date end) {
+        ArrayList<Place> places = new ArrayList<>();
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        String info = "Top 5 cheapest locations between " + dateFormat.format(start)
+                + " and " + dateFormat.format(end) + " in " + name + ":\n";
         switch (type) {
             case COUNTRY:
                 places = Utility.getPlacesFromCountryByDate(name, start, end);
@@ -45,16 +56,26 @@ public class Queries {
 
         }
 
+//        for (int i = 0; i < places.size(); i++) {
+//            System.out.println(i + " " + places.get(i).getName());
+//        }
 
-        return null;
+        Collections.sort(places, new PlacePriceComparator());
+        for (int i = 0; i < TOP_FIVE; i++) {
+            if (i >= places.size()) {
+                break;
+            }
+            info += (i+1) + ".\n";
+            info += getInfoForName(places.get(i).getName());
+        }
+        return info;
     }
 
-    public String getCheapestPlaceForActivity(String activity) {
+    public static String getCheapestPlaceForActivity(String activity) {
         ArrayList<Place> places = ActivityMap.getInstance().getPlaces(activity);
 
         Double minValue = Double.MAX_VALUE;
         Place resultPlace = null;
-
         for (Place place:places) {
             if (place.getAvgPricePerDay() < minValue) {
                 minValue = place.getAvgPricePerDay();
