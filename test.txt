@@ -1,0 +1,137 @@
+Choose one of the following commands
+1 - get info about a place
+2 - get top 5 cheapest places between two dates
+3 - get the cheapest place to practice an activity for 10 days
+0 - exit
+
+Command number: 1
+Insert name of the place:
+input: ROd0c0p0
+Information about ROd0c0p0:
+
+Location name: ROd0c0p0
+City: ROd0c0
+District: ROd0
+Country: RO
+Average price per day: 155.0
+Start period: 03/01/2017 until 25/01/2017
+Activities: activity0 activity1 activity2 activity3 activity4
+
+Command number: 2
+Insert the type of the location:
+1 - City
+2 - District
+3 - Country
+input: 3
+Insert the name of the location:
+input: RO
+Insert the first day using the format dd/mm/yyyy:
+input: 1/1/2017
+input: Insert the last day using the format dd/mm/yyyy:
+6/1/2017
+Top 5 cheapest locations between 01/01/2017 and 06/01/2017 in RO:
+1.
+Location name: ROd1c1p2
+City: ROd1c1
+District: ROd1
+Country: RO
+Average price per day: 100.0
+Start period: 01/01/2017 until 07/01/2017
+Activities: activity0 activity1
+2.
+Location name: ROd1c1p1
+City: ROd1c1
+District: ROd1
+Country: RO
+Average price per day: 105.0
+Start period: 01/01/2017 until 07/01/2017
+Activities: activity0 activity1 activity2
+3.
+Location name: ROd1c1p0
+City: ROd1c1
+District: ROd1
+Country: RO
+Average price per day: 110.0
+Start period: 01/01/2017 until 07/01/2017
+Activities: activity0 activity1 activity2 activity3
+4.
+Location name: ROd0c1p2
+City: ROd0c1
+District: ROd0
+Country: RO
+Average price per day: 130.0
+Start period: 01/01/2017 until 07/01/2017
+Activities: activity0 activity1 activity2 activity3
+5.
+Location name: ROd0c1p1
+City: ROd0c1
+District: ROd0
+Country: RO
+Average price per day: 135.0
+Start period: 01/01/2017 until 07/01/2017
+Activities: activity0 activity1 activity2 activity3 activity4
+
+Command number: 2
+Insert the type of the location:
+1 - City
+2 - District
+3 - Country
+input: 2
+Insert the name of the location:
+input: ROd0
+Insert the first day using the format dd/mm/yyyy:
+input: 4/1/2017
+input: Insert the last day using the format dd/mm/yyyy:
+6/1/2017
+Top 5 cheapest locations between 04/01/2017 and 06/01/2017 in ROd0:
+1.
+Location name: ROd0c1p2
+City: ROd0c1
+District: ROd0
+Country: RO
+Average price per day: 130.0
+Start period: 01/01/2017 until 07/01/2017
+Activities: activity0 activity1 activity2 activity3
+2.
+Location name: ROd0c1p1
+City: ROd0c1
+District: ROd0
+Country: RO
+Average price per day: 135.0
+Start period: 01/01/2017 until 07/01/2017
+Activities: activity0 activity1 activity2 activity3 activity4
+3.
+Location name: ROd0c1p0
+City: ROd0c1
+District: ROd0
+Country: RO
+Average price per day: 140.0
+Start period: 01/01/2017 until 07/01/2017
+Activities: activity0 activity1
+4.
+Location name: ROd0c0p2
+City: ROd0c0
+District: ROd0
+Country: RO
+Average price per day: 145.0
+Start period: 03/01/2017 until 25/01/2017
+Activities: activity0 activity1 activity2
+5.
+Location name: ROd0c0p1
+City: ROd0c0
+District: ROd0
+Country: RO
+Average price per day: 150.0
+Start period: 03/01/2017 until 25/01/2017
+Activities: activity0 activity1 activity2 activity3
+
+Command number: 3
+Insert the name of the activity:
+input: activity0
+Location name: BGd1c0p2
+City: BGd1c0
+District: BGd1
+Country: BG
+Average price per day: 55.0
+Start period: 03/01/2017 until 25/01/2017
+Activities: activity0 activity1 activity2 activity3

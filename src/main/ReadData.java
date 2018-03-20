@@ -24,12 +24,26 @@ public class ReadData {
 
             while ((currentEntry = bufferedReader.readLine()) != null) {
                 String[] currentEntrySplitter = currentEntry.split(" ");
-                Country tempCountry = new Country(currentEntrySplitter[0]);
-                District tempDistrict = new District(currentEntrySplitter[1]);
-                City tempCity = new City(currentEntrySplitter[2]);
+                Country tempCountry;
+                if (World.getInstance().getElement(currentEntrySplitter[0]) == null) {
+                    tempCountry = new Country(currentEntrySplitter[0]);
+                } else {
+                    tempCountry = (Country) World.getInstance().getElement(currentEntrySplitter[0]);
+                }
 
-//                System.out.println(tempCity.getName() + "\nswag");
-//                System.out.println(tempCity.getName() + "\nswag");
+                District tempDistrict;
+                if (DistrictsMap.getInstance().getDistrict(currentEntrySplitter[1]) == null) {
+                    tempDistrict = new District(currentEntrySplitter[1]);
+                } else {
+                    tempDistrict = DistrictsMap.getInstance().getDistrict(currentEntrySplitter[1]);
+                }
+
+                City tempCity;
+                if (CityMap.getInstance().getCity(currentEntrySplitter[2]) == null) {
+                    tempCity = new City(currentEntrySplitter[2]);
+                } else {
+                    tempCity = CityMap.getInstance().getCity(currentEntrySplitter[2]);
+                }
 
                 String locationName = currentEntrySplitter[3];
                 Double avgPricePerDay = Double.parseDouble(currentEntrySplitter[4]);
@@ -43,7 +57,6 @@ public class ReadData {
                 tempCity.addLocationElement(tempPlace);
                 tempDistrict.addLocationElement(tempCity);
                 tempCountry.addLocationElement(tempDistrict);
-
                 /**
                  * Insert this place in the location_maps.ActivityMap for all activities.
                  */

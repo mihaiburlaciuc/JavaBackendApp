@@ -21,4 +21,8 @@ public class World {
     public void addLocationElement(LocationElement locationElement) {
         subElements.put(locationElement.getName(), locationElement);
     }
+
+    public HashMap<String, LocationElement> getSubElements() {
+        return subElements;
+    }
 }

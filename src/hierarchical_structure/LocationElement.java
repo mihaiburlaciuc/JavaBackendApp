@@ -29,4 +29,7 @@ public abstract class LocationElement {
 
     public abstract void addLocationElement(LocationElement locationElement);
 
+    public LocationElement getSuperiorElement() {
+        return superiorElement;
+    }
 }
